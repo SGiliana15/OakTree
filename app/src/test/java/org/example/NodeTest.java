@@ -13,7 +13,7 @@ public class NodeTest {
     Squirrel squirrel = new Squirrel("Cheeks");
     Node node = new Node(squirrel);
 
-    assertEquals("Cheeks", node.get_data().getName());
+    assertEquals("Cheeks", node.getData().getName());
     assertNull(node.left());
     assertNull(node.right());
   }
@@ -24,11 +24,11 @@ public class NodeTest {
     Node leftChild = new Node(new Squirrel("Lefty"));
     Node rightChild = new Node(new Squirrel("Righty"));
 
-    root.set_left(leftChild);
-    root.set_right(rightChild);
+    root.setLeft(leftChild);
+    root.setRight(rightChild);
 
-    assertEquals("Lefty", root.left().get_data().getName());
-    assertEquals("Righty", root.right().get_data().getName());
+    assertEquals("Lefty", root.left().getData().getName());
+    assertEquals("Righty", root.right().getData().getName());
   }
 
   @Test
@@ -39,12 +39,12 @@ public class NodeTest {
     Node right = new Node(new Squirrel("Right"));
     Node rightRight = new Node(new Squirrel("DoubleRight"));
 
-    root.set_left(left);
-    left.set_left(leftLeft);
-    root.set_right(right);
-    right.set_right(rightRight);
+    root.setLeft(left);
+    left.setLeft(leftLeft);
+    root.setRight(right);
+    right.setRight(rightRight);
 
-    assertEquals("DoubleLeft", root.left().left().get_data().getName());
-    assertEquals("DoubleRight", root.right().right().get_data().getName());
+    assertEquals("DoubleLeft", root.left().left().getData().getName());
+    assertEquals("DoubleRight", root.right().right().getData().getName());
   }
 }

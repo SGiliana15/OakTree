@@ -14,13 +14,13 @@ public class App {
     Squirrel fluffybutt = new Squirrel("Mr. Fluffy Butt");
     Node nodeThree = new Node(fluffybutt);
  
-    nodeOne.set_left(nodeTwo);
-    nodeOne.set_right(nodeThree);
+    nodeOne.setLeft(nodeTwo);
+    nodeOne.setRight(nodeThree);
  
     Node retrievedLeft = nodeOne.left(); // This should retrieve the left node
     Node retrievedRight = nodeOne.right(); // This should retrieve the right node
 
-    System.out.println("Left: " + retrievedLeft.get_data().getName());
-    System.out.println("Right: " + retrievedRight.get_data().getName());
+    System.out.println("Left: " + retrievedLeft.getData().getName());
+    System.out.println("Right: " + retrievedRight.getData().getName());
   }
 }

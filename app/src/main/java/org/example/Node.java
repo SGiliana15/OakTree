@@ -9,15 +9,15 @@ public class Node {
     this.data = data;
   }
 
-  public Squirrel get_data() {
+  public Squirrel getData() {
     return data;
   }
 
-  public void set_left(Node node) {
+  public void setLeft(Node node) {
     this.left = node;
   }
 
-  public void set_right(Node node) {
+  public void setRight(Node node) {
     this.right = node;
   }
 
